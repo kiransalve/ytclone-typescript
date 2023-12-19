@@ -1,8 +1,10 @@
-import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
-import { BsYoutube } from "react-icons/bs";
+import { BsCameraVideo, BsYoutube, BsBell } from "react-icons/bs";
+import { TiMicrophone } from "react-icons/ti";
+import { IoAppsSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import profile from "../assets/profile.png";
 
 const Navbar = () => {
   return (
@@ -35,6 +37,21 @@ const Navbar = () => {
             </button>
           </div>
         </form>
+        <div className="text-xl p-3 bg-zinc-900 rounded-full">
+          <TiMicrophone />
+        </div>
+      </div>
+
+      <div className="flex gap-5 items-center text-xl">
+        <BsCameraVideo />
+        <IoAppsSharp />
+        <div className="relative">
+          <BsBell />
+          <span className="absolute bottom-2 left-2 text-xs bg-red-600 rounded-full px-1">
+            9+
+          </span>
+        </div>
+        <img src={profile} alt="" className="w-9 h-9 rounded-full" />
       </div>
     </div>
   );
